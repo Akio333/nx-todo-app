@@ -9,7 +9,9 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./date.component.scss'],
 })
 export class DateComponent {
-  currentDate = new Date();
-  month = this.currentDate.toLocaleString('default', { month: 'short' }).toUpperCase();
+  currentDate = new Date(); //create date obj
+  month = this.currentDate
+    .toLocaleString('default', { month: 'short' })
+    .toUpperCase();
   date = this.currentDate.getDate();
 }
