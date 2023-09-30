@@ -1,0 +1,7 @@
+@mixin elevation-100 {
+    box-shadow: 0 toRem(3) toRem(6) toRem(1) rgba(0, 0, 0, 0.15);
+}
+
+@mixin elevation-menu {
+    box-shadow: 0 0 toRem(6) toRem(1) rgba(0, 0, 0, 0.15);
+}

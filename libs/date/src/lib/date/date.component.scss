@@ -1,0 +1,42 @@
+@import 'apps/todo/src/styles.scss';
+
+div {
+    display: grid;
+    grid-template-columns: 100%;
+    width: toRem(34);
+    height: toRem(22);
+
+    p {
+        margin: 0;
+    }
+
+    .month {
+        border-radius: toRem(5) toRem(5) 0 0 ;
+        border: toRem(2) solid $color-hl;
+        background: $color-hl;
+        padding-block: toRem(4);
+        
+        color: $color-bg;
+        text-align: center;
+        font-size: toRem(10);
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .date {
+        border-radius: 0 0 toRem(6) toRem(6);
+        border: toRem(2) solid $color-hl;
+
+        padding-inline: toRem(8);
+        padding-block: toRem(4);
+
+        color: $color-hl;
+        text-align: center;
+        font-size: toRem(14);
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: toRem(0.21);
+    }
+}

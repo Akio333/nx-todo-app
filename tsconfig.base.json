@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "button": ["libs/button/src/index.ts"],
+      "date": ["libs/date/src/index.ts"],
       "header": ["libs/header/src/index.ts"],
       "item": ["libs/item/src/index.ts"],
       "menu": ["libs/menu/src/index.ts"]

@@ -1,0 +1,55 @@
+@import 'apps/todo/src/styles.scss';
+
+.wrap {
+    width: toRem(52);
+    height: toRem(32);
+    position: relative;
+    display: grid;
+    place-content: center;
+    background-color: $color-bg;
+    border-radius: toRem(10) toRem(10) 0 0;
+    
+    &:hover {
+        @include elevation-menu;
+        .dropdown {
+            display: block;
+        }
+    }
+
+    img {
+        width: toRem(22);
+    }
+
+    .cover {
+        float: right;
+        width: toRem(52);
+        height: toRem(8);
+        margin-top: toRem(-6);
+        background-color: $color-bg;
+    }
+
+    p {
+        margin: 0;
+        color: $color-sec;
+        text-align: center;
+        font-size: toRem(16);
+
+        padding-inline: toRem(16);
+        padding-block: toRem(12);
+    }
+
+    p.selected {
+        color: $color-hl;
+    }
+
+    .dropdown {
+        display: none;
+        width: toRem(114);
+        position: absolute;
+        right: 0;
+        top: toRem(30);
+        background-color: $color-bg;
+        border-radius: toRem(10) 0 toRem(10) toRem(10);
+        @include elevation-menu;
+    }
+}

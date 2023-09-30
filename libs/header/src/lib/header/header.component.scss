@@ -1,0 +1,16 @@
+@import 'apps/todo/src/styles.scss';
+
+div {
+    display: flex;
+    width: 100%;
+    gap: toRem(16);
+    
+    h1 {
+        flex-grow: 1;
+        margin: 0;
+        font-size: toRem(36);
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+}

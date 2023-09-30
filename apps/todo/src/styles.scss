@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@import 'typography/functions.scss';
+@import 'typography/variables.scss';
+@import 'typography/mixins.scss';
+
+// Basic CSS
+body {
+    font-family: 'Roboto', sans-serif;;
+    padding: toRem(40);
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
