@@ -1,25 +1,25 @@
-@import 'apps/todo/src/styles.scss';
+@import 'apps/todo/src/styles';
 
 .wrap {
     display: flex;
     flex-direction: row;
-    gap: toRem(32);
-    height: toRem(46);
+    gap: torem(32);
+    height: torem(46);
     width: 100%;
-    padding: toRem(8) toRem(10);
+    padding: torem(8) torem(10);
 
-    label{
-        input {
+    label {
+        input[type="checkbox"] {
             all: unset;
             display: block;
-            height: toRem(20);
-            width: toRem(20);
-            border: toRem(2) solid $color-sec;
+            height: torem(20);
+            width: torem(20);
+            border: torem(2) solid $color-sec;
             border-radius: 100%;
 
             &:checked {
                 background: url('/assets/checked.svg') no-repeat center center;
-                background-size: toRem(22);
+                background-size: torem(22);
                 border-color: $color-dis;
             }
         }
@@ -28,28 +28,29 @@
     .task {
         flex-grow: 1;
 
-        input {
+        input[type="text"] {
             all: unset;
             width: 100%;
             color: $color-dis;
-            font-size: toRem(20);
+            font-size: torem(20);
         }
     }
 
     button {
         all: unset;
         display: none;
-        height: toRem(24);
-        width: toRem(24);
-
+        height: torem(24);
+        width: torem(24);
         background: url('/assets/remove.svg') no-repeat center center;
-        background-size: toRem(28);
+        background-size: torem(28);
     }
 }
 
 .wrap.selected {
-    border-radius: toRem(10);
+    border-radius: torem(10);
+
     @include elevation-100;
+
     button {
         display: block;
     }

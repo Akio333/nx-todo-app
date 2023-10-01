@@ -26,6 +26,13 @@
       "options": {
         "lintFilePatterns": ["libs/header/**/*.ts", "libs/header/**/*.html"]
       }
+    },
+    "stylelint": {
+      "executor": "nx-stylelint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/header/**/*.css", "libs/header/**/*.scss"]
+      }
     }
   }
 }

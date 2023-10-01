@@ -1,19 +1,19 @@
-@import 'apps/todo/src/styles.scss';
+@import 'apps/todo/src/styles';
 
 button {
     all: unset;
     display: flex;
     width: fit-content;
-    gap: toRem(32);
-    padding: toRem(8) toRem(10);
+    gap: torem(32);
+    padding: torem(8) torem(10);
 
     img {
-        width: toRem(24);
+        width: torem(24);
     }
 
     p {
         margin: 0;
         color: $color-hl;
-        font-size: toRem(20);
+        font-size: torem(20);
     }
 }

@@ -1,30 +1,43 @@
-@import 'apps/todo/src/styles.scss';
+@import 'apps/todo/src/styles';
 
 .wrap {
-    width: toRem(52);
-    height: toRem(32);
+    width: torem(52);
+    height: torem(32);
     position: relative;
     display: grid;
     place-content: center;
     background-color: $color-bg;
-    border-radius: toRem(10) toRem(10) 0 0;
+    border-radius: torem(10) torem(10) 0 0;
+
+    .dropdown {
+        display: none;
+        width: torem(114);
+        position: absolute;
+        right: 0;
+        top: torem(30);
+        background-color: $color-bg;
+        border-radius: torem(10) 0 torem(10) torem(10);
+
+        @include elevation-menu;
+    }
     
     &:hover {
         @include elevation-menu;
+
         .dropdown {
             display: block;
         }
     }
 
     img {
-        width: toRem(22);
+        width: torem(22);
     }
 
     .cover {
         float: right;
-        width: toRem(52);
-        height: toRem(8);
-        margin-top: toRem(-6);
+        width: torem(52);
+        height: torem(8);
+        margin-top: torem(-6);
         background-color: $color-bg;
     }
 
@@ -32,24 +45,12 @@
         margin: 0;
         color: $color-sec;
         text-align: center;
-        font-size: toRem(16);
-
-        padding-inline: toRem(16);
-        padding-block: toRem(12);
+        font-size: torem(16);
+        padding-inline: torem(16);
+        padding-block: torem(12);
     }
 
     p.selected {
         color: $color-hl;
-    }
-
-    .dropdown {
-        display: none;
-        width: toRem(114);
-        position: absolute;
-        right: 0;
-        top: toRem(30);
-        background-color: $color-bg;
-        border-radius: toRem(10) 0 toRem(10) toRem(10);
-        @include elevation-menu;
     }
 }
