@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -8,4 +8,10 @@ import { CommonModule } from '@angular/common';
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss'],
 })
-export class ButtonComponent {}
+export class ButtonComponent {
+  @Output() btnClicked: EventEmitter<boolean> = new EventEmitter();
+
+  onClick() {
+    this.btnClicked.emit(true);
+  }
+}

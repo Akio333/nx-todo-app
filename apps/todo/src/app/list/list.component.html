@@ -1,6 +1,8 @@
 <div>
-  <lib-item></lib-item>
-  <lib-item></lib-item>
-  <lib-item></lib-item>
-  <lib-button></lib-button>
+  <lib-item
+    *ngFor="let item of taskList"
+    [task]="item"
+    (removeTask)="handleRemoveItem($event)"
+  ></lib-item>
+  <lib-button (btnClicked)="handleCreateItem($event)"></lib-button>
 </div>
