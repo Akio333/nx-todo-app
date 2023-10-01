@@ -20,7 +20,7 @@ jobs:
       - uses: nrwl/nx-set-shas@v3
 
       - name: Install Dependancies
-        run: npm ci
+        run: npm install && npm ci
 
       - name: Style Lint Check
         run: npx nx format:check
