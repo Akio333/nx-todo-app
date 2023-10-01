@@ -9,7 +9,6 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./item.component.scss'],
 })
 export class ItemComponent {
-  @Input()
   selected!: boolean;
 
   name = 'item' + (Math.random() * 100).toFixed(0);

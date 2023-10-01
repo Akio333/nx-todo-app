@@ -48,6 +48,10 @@
     font-size: torem(16);
     padding-inline: torem(16);
     padding-block: torem(12);
+
+    &:nth-child(3) {
+      border-block: torem(2) solid $color-line;
+    }
   }
 
   p.selected {
