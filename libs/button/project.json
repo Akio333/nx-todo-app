@@ -26,6 +26,13 @@
       "options": {
         "lintFilePatterns": ["libs/button/**/*.ts", "libs/button/**/*.html"]
       }
+    },
+    "stylelint": {
+      "executor": "nx-stylelint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/button/**/*.css", "libs/button/**/*.scss"]
+      }
     }
   }
 }

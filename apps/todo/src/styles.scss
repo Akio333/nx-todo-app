@@ -1,14 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-@import 'typography/functions.scss';
-@import 'typography/variables.scss';
-@import 'typography/mixins.scss';
+@import 'https://fonts.googleapis.com/css2?family=Roboto&display=swap';
+@import 'typography/functions';
+@import 'typography/variables';
+@import 'typography/mixins';
 
 // Basic CSS
 body {
-    font-family: 'Roboto', sans-serif;;
-    padding: toRem(40);
+    font-family: Roboto, sans-serif;
+    padding: torem(40);
     margin: 0;
 }
 
@@ -18,10 +17,10 @@ body {
 
 .sr-only {
     position: absolute;
-    width: toRem(1);
-    height: toRem(1);
+    width: torem(1);
+    height: torem(1);
     padding: 0;
-    margin: toRem(-1);
+    margin: torem(-1);
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
     border: 0;
