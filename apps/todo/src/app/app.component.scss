@@ -1,0 +1,7 @@
+@import 'apps/todo/src/styles.scss';
+
+div {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: toRem(24);
+}

@@ -1,1 +1,12 @@
-<p>item works!</p>
+<div [ngClass]="(selected) ? 'wrap selected' : 'wrap'">
+    <label [htmlFor]="name">
+        <span class="sr-only">Mark</span>
+        <input type="checkbox" [name]="name">
+    </label>
+    <div class="task">
+        <input type="text" [value]="item">
+    </div>
+    <button>
+        <span class="sr-only">Remove task</span>
+    </button>
+</div>

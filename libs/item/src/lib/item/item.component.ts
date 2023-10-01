@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -6,6 +6,12 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './item.component.html',
-  styleUrls: ['./item.component.css'],
+  styleUrls: ['./item.component.scss'],
 })
-export class ItemComponent {}
+export class ItemComponent {
+  @Input()
+  selected!: boolean;
+
+  name = 'item' + (Math.random() * 100).toFixed(0);
+  item = 'This is todo item';
+}
