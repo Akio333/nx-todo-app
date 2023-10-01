@@ -43,15 +43,16 @@
     width: torem(24);
     background: url('/assets/remove.svg') no-repeat center center;
     background-size: torem(28);
+    cursor: pointer;
   }
-}
 
-.wrap.selected {
-  border-radius: torem(10);
+  &:hover {
+    border-radius: torem(10);
 
-  @include elevation-100;
+    @include elevation-100;
 
-  button {
-    display: block;
+    button {
+      display: block;
+    }
   }
 }

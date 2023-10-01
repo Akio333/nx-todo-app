@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Task } from 'models';
 
 @Component({
   selector: 'lib-item',
@@ -8,10 +9,16 @@ import { CommonModule } from '@angular/common';
   templateUrl: './item.component.html',
   styleUrls: ['./item.component.scss'],
 })
-export class ItemComponent {
-  @Input()
-  selected!: boolean;
+export class ItemComponent implements OnInit {
+  @Input() task!: Task;
+  @Output() removeTask: EventEmitter<number> = new EventEmitter();
+  name = '';
 
-  name = 'item' + (Math.random() * 100).toFixed(0);
-  item = 'This is todo item';
+  onRemoveClicked() {
+    this.removeTask.emit(this.task?.id);
+  }
+
+  ngOnInit() {
+    this.name = 'item' + this.task?.taskItem;
+  }
 }
