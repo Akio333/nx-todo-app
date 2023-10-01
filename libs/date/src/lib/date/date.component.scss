@@ -1,39 +1,39 @@
 @import 'apps/todo/src/styles';
 
 div {
-    display: grid;
-    grid-template-columns: 100%;
-    width: torem(34);
-    height: torem(22);
+  display: grid;
+  grid-template-columns: 100%;
+  width: torem(34);
+  height: torem(22);
 
-    p {
-        margin: 0;
-    }
+  p {
+    margin: 0;
+  }
 
-    .month {
-        border-radius: torem(5) torem(5) 0 0 ;
-        border: torem(2) solid $color-hl;
-        background: $color-hl;
-        padding-block: torem(4);
-        color: $color-bg;
-        text-align: center;
-        font-size: torem(10);
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-    }
+  .month {
+    border-radius: torem(5) torem(5) 0 0;
+    border: torem(2) solid $color-hl;
+    background: $color-hl;
+    padding-block: torem(4);
+    color: $color-bg;
+    text-align: center;
+    font-size: torem(10);
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
 
-    .date {
-        border-radius: 0 0 torem(6) torem(6);
-        border: torem(2) solid $color-hl;
-        padding-inline: torem(8);
-        padding-block: torem(4);
-        color: $color-hl;
-        text-align: center;
-        font-size: torem(14);
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-        letter-spacing: torem(0.21);
-    }
+  .date {
+    border-radius: 0 0 torem(6) torem(6);
+    border: torem(2) solid $color-hl;
+    padding-inline: torem(8);
+    padding-block: torem(4);
+    color: $color-hl;
+    text-align: center;
+    font-size: torem(14);
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: torem(0.21);
+  }
 }

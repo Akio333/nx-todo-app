@@ -1,57 +1,57 @@
 @import 'apps/todo/src/styles';
 
 .wrap {
-    display: flex;
-    flex-direction: row;
-    gap: torem(32);
-    height: torem(46);
-    width: 100%;
-    padding: torem(8) torem(10);
+  display: flex;
+  flex-direction: row;
+  gap: torem(32);
+  height: torem(46);
+  width: 100%;
+  padding: torem(8) torem(10);
 
-    label {
-        input[type="checkbox"] {
-            all: unset;
-            display: block;
-            height: torem(20);
-            width: torem(20);
-            border: torem(2) solid $color-sec;
-            border-radius: 100%;
+  label {
+    input[type='checkbox'] {
+      all: unset;
+      display: block;
+      height: torem(20);
+      width: torem(20);
+      border: torem(2) solid $color-sec;
+      border-radius: 100%;
 
-            &:checked {
-                background: url('/assets/checked.svg') no-repeat center center;
-                background-size: torem(22);
-                border-color: $color-dis;
-            }
-        }
+      &:checked {
+        background: url('/assets/checked.svg') no-repeat center center;
+        background-size: torem(22);
+        border-color: $color-dis;
+      }
     }
+  }
 
-    .task {
-        flex-grow: 1;
+  .task {
+    flex-grow: 1;
 
-        input[type="text"] {
-            all: unset;
-            width: 100%;
-            color: $color-dis;
-            font-size: torem(20);
-        }
+    input[type='text'] {
+      all: unset;
+      width: 100%;
+      color: $color-dis;
+      font-size: torem(20);
     }
+  }
 
-    button {
-        all: unset;
-        display: none;
-        height: torem(24);
-        width: torem(24);
-        background: url('/assets/remove.svg') no-repeat center center;
-        background-size: torem(28);
-    }
+  button {
+    all: unset;
+    display: none;
+    height: torem(24);
+    width: torem(24);
+    background: url('/assets/remove.svg') no-repeat center center;
+    background-size: torem(28);
+  }
 }
 
 .wrap.selected {
-    border-radius: torem(10);
+  border-radius: torem(10);
 
-    @include elevation-100;
+  @include elevation-100;
 
-    button {
-        display: block;
-    }
+  button {
+    display: block;
+  }
 }

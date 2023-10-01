@@ -1,5 +1,5 @@
-@use "sass:math";
+@use 'sass:math';
 
-@function torem($value){
-    @return math.div($value, 16) + rem;
+@function torem($value) {
+  @return math.div($value, 16) + rem;
 }
