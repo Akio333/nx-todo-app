@@ -1,5 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ListComponent } from './list.component';
+import { ItemComponent } from 'item';
+import { ButtonComponent } from 'button';
 
 describe('ListComponent', () => {
   let component: ListComponent;
@@ -8,6 +10,7 @@ describe('ListComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ListComponent],
+      imports: [ItemComponent, ButtonComponent],
     }).compileComponents();
 
     fixture = TestBed.createComponent(ListComponent);

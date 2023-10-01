@@ -1,56 +1,56 @@
 @import 'apps/todo/src/styles';
 
 .wrap {
-    width: torem(52);
-    height: torem(32);
-    position: relative;
-    display: grid;
-    place-content: center;
+  width: torem(52);
+  height: torem(32);
+  position: relative;
+  display: grid;
+  place-content: center;
+  background-color: $color-bg;
+  border-radius: torem(10) torem(10) 0 0;
+
+  .dropdown {
+    display: none;
+    width: torem(114);
+    position: absolute;
+    right: 0;
+    top: torem(30);
     background-color: $color-bg;
-    border-radius: torem(10) torem(10) 0 0;
+    border-radius: torem(10) 0 torem(10) torem(10);
+
+    @include elevation-menu;
+  }
+
+  &:hover {
+    @include elevation-menu;
 
     .dropdown {
-        display: none;
-        width: torem(114);
-        position: absolute;
-        right: 0;
-        top: torem(30);
-        background-color: $color-bg;
-        border-radius: torem(10) 0 torem(10) torem(10);
-
-        @include elevation-menu;
+      display: block;
     }
-    
-    &:hover {
-        @include elevation-menu;
+  }
 
-        .dropdown {
-            display: block;
-        }
-    }
+  img {
+    width: torem(22);
+  }
 
-    img {
-        width: torem(22);
-    }
+  .cover {
+    float: right;
+    width: torem(52);
+    height: torem(8);
+    margin-top: torem(-6);
+    background-color: $color-bg;
+  }
 
-    .cover {
-        float: right;
-        width: torem(52);
-        height: torem(8);
-        margin-top: torem(-6);
-        background-color: $color-bg;
-    }
+  p {
+    margin: 0;
+    color: $color-sec;
+    text-align: center;
+    font-size: torem(16);
+    padding-inline: torem(16);
+    padding-block: torem(12);
+  }
 
-    p {
-        margin: 0;
-        color: $color-sec;
-        text-align: center;
-        font-size: torem(16);
-        padding-inline: torem(16);
-        padding-block: torem(12);
-    }
-
-    p.selected {
-        color: $color-hl;
-    }
+  p.selected {
+    color: $color-hl;
+  }
 }
