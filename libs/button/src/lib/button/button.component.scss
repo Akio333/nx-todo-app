@@ -1,0 +1,19 @@
+@import 'apps/todo/src/styles.scss';
+
+button {
+    all: unset;
+    display: flex;
+    width: fit-content;
+    gap: toRem(32);
+    padding: toRem(8) toRem(10);
+
+    img {
+        width: toRem(24);
+    }
+
+    p {
+        margin: 0;
+        color: $color-hl;
+        font-size: toRem(20);
+    }
+}
