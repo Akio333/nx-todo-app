@@ -4,5 +4,8 @@
     [task]="item"
     (updateTask)="handleUpdateTask($event)"
   ></lib-item>
-  <lib-button (btnClicked)="handleCreateItem($event)"></lib-button>
+  <lib-button
+    (btnClicked)="handleCreateItem($event)"
+    *ngIf="currentMenu === todo"
+  ></lib-button>
 </div>

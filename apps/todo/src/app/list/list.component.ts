@@ -9,6 +9,7 @@ import { Status, Task } from 'models';
 export class ListComponent implements OnChanges {
   @Input() status!: Status;
   currentMenu = Status.Todo;
+  todo = Status.Todo;
   id = 1;
   taskList: Task[] = [];
 

@@ -12,10 +12,16 @@ import { Status, Task } from 'models';
 export class ItemComponent implements OnInit {
   @Input() task!: Task;
   @Output() updateTask: EventEmitter<Task> = new EventEmitter();
+  deleted = Status.Removed;
+  completed = Status.Done;
   name = '';
 
   onClicked(status: boolean) {
-    this.task.status = status ? Status.Done : Status.Removed;
+    this.task.status = status
+      ? this.task?.status === Status.Todo
+        ? Status.Done
+        : Status.Todo
+      : Status.Removed;
     this.updateTask.emit(this.task);
   }
 
