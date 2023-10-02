@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MenuComponent } from 'menu';
-import { DateComponent } from 'date'
+import { DateComponent } from 'date';
+import { Status } from 'models';
 
 @Component({
   selector: 'lib-header',
@@ -10,4 +11,9 @@ import { DateComponent } from 'date'
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+  @Output() menuEvent: EventEmitter<Status> = new EventEmitter();
+  menuHandler(status: Status) {
+    this.menuEvent.emit(status);
+  }
+}

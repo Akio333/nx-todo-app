@@ -41,20 +41,23 @@
     background-color: $color-bg;
   }
 
-  p {
+  button {
+    all: unset;
     margin: 0;
     color: $color-sec;
     text-align: center;
     font-size: torem(16);
     padding-inline: torem(16);
     padding-block: torem(12);
+    cursor: pointer;
 
     &:nth-child(3) {
       border-block: torem(2) solid $color-line;
     }
   }
 
-  p.selected {
+  button.selected,
+  button:hover {
     color: $color-hl;
   }
 }

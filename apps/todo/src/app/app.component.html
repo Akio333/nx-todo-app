@@ -1,4 +1,4 @@
 <div>
-    <lib-header></lib-header>
-    <app-list></app-list>
+  <lib-header (menuEvent)="menuHandler($event)"></lib-header>
+  <app-list [status]="status"></app-list>
 </div>

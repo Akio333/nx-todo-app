@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Task } from 'models';
+import { Status, Task } from 'models';
 
 @Component({
   selector: 'lib-item',
@@ -11,11 +11,12 @@ import { Task } from 'models';
 })
 export class ItemComponent implements OnInit {
   @Input() task!: Task;
-  @Output() removeTask: EventEmitter<number> = new EventEmitter();
+  @Output() updateTask: EventEmitter<Task> = new EventEmitter();
   name = '';
 
-  onRemoveClicked() {
-    this.removeTask.emit(this.task?.id);
+  onClicked(status: boolean) {
+    this.task.status = status ? Status.Done : Status.Removed;
+    this.updateTask.emit(this.task);
   }
 
   ngOnInit() {

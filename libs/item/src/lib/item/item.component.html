@@ -1,12 +1,12 @@
 <div class="wrap">
   <label [htmlFor]="name">
     <span class="sr-only">Mark</span>
-    <input type="checkbox" [name]="name" />
+    <input type="checkbox" [name]="name" (click)="onClicked(true)" />
   </label>
   <div class="task">
     <input type="text" [value]="task ? task.taskItem : ''" />
   </div>
-  <button (click)="onRemoveClicked()">
+  <button (click)="onClicked(false)">
     <span class="sr-only">Remove task</span>
   </button>
 </div>

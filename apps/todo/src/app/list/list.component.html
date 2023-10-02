@@ -1,8 +1,8 @@
 <div>
   <lib-item
-    *ngFor="let item of taskList"
+    *ngFor="let item of getList()"
     [task]="item"
-    (removeTask)="handleRemoveItem($event)"
+    (updateTask)="handleUpdateTask($event)"
   ></lib-item>
   <lib-button (btnClicked)="handleCreateItem($event)"></lib-button>
 </div>

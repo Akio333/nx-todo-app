@@ -1,12 +1,28 @@
-
-
 <div class="wrap">
-    <img src="assets/dots.svg" alt="menu icon">
-    
-    <div class="dropdown">
-        <div class="cover"></div>
-        <p class="completed selected">Completed</p>
-        <p class="in-progress">In Progress</p>
-        <p class="removed">Removed</p>
-    </div>
+  <img src="assets/dots.svg" alt="menu icon" />
+
+  <div class="dropdown">
+    <div class="cover"></div>
+    <button
+      class="completed"
+      [class.selected]="isSelected(1)"
+      (click)="menuItemClicked(done, 1)"
+    >
+      Completed
+    </button>
+    <button
+      class="in-progress"
+      [class.selected]="isSelected(2)"
+      (click)="menuItemClicked(progress, 2)"
+    >
+      In Progress
+    </button>
+    <button
+      class="removed"
+      [class.selected]="isSelected(3)"
+      (click)="menuItemClicked(removed, 3)"
+    >
+      Removed
+    </button>
+  </div>
 </div>
