@@ -1,12 +1,23 @@
-<div class="wrap">
+<div class="wrap" *ngIf="task">
   <label [htmlFor]="name">
     <span class="sr-only">Mark</span>
-    <input type="checkbox" [name]="name" />
+    <input
+      type="checkbox"
+      [name]="name"
+      (click)="onClicked(true)"
+      [disabled]="task.status === deleted"
+      [checked]="task.status === completed"
+      *ngIf="task?.status !== deleted"
+    />
   </label>
   <div class="task">
-    <input type="text" [value]="task ? task.taskItem : ''" />
+    <input
+      type="text"
+      [value]="task ? task.taskItem : ''"
+      [disabled]="task.status === deleted"
+    />
   </div>
-  <button (click)="onRemoveClicked()">
+  <button (click)="onClicked(false)" *ngIf="task?.status !== deleted">
     <span class="sr-only">Remove task</span>
   </button>
 </div>

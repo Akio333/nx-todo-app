@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { Status, Task } from 'models';
 
 @Component({
@@ -6,9 +6,16 @@ import { Status, Task } from 'models';
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.scss'],
 })
-export class ListComponent {
+export class ListComponent implements OnChanges {
+  @Input() status!: Status;
+  currentMenu = Status.Todo;
+  todo = Status.Todo;
   id = 1;
   taskList: Task[] = [];
+
+  getList() {
+    return this.taskList.filter((item) => item.status === this.currentMenu);
+  }
 
   handleCreateItem(isClicked: boolean) {
     if (!isClicked) {
@@ -19,7 +26,17 @@ export class ListComponent {
     this.id++;
   }
 
-  handleRemoveItem(id: number) {
-    this.taskList = this.taskList.filter((item) => id !== item.id);
+  handleUpdateTask(task: Task) {
+    const index = this.taskList.findIndex((item) => item.id === task.id);
+    this.taskList[index] = task;
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (
+      changes['status'] &&
+      changes['status']?.previousValue != changes['status']?.currentValue
+    ) {
+      this.currentMenu = this.status;
+    }
   }
 }
