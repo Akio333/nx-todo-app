@@ -18,4 +18,9 @@ describe('DateComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should have month and date', () => {
+    expect(component.date).toBeTruthy();
+    expect(component.month).toBeTruthy();
+  });
 });

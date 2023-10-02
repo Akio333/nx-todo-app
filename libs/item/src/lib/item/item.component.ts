@@ -26,6 +26,6 @@ export class ItemComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.name = 'item' + this.task?.taskItem;
+    this.name = 'item' + this.task?.id;
   }
 }
