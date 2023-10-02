@@ -12,9 +12,12 @@
   </label>
   <div class="task">
     <input
+      #item
       type="text"
       [value]="task ? task.taskItem : ''"
       [disabled]="task.status === deleted"
+      (keyup.enter)="onBlur(item.value)"
+      (blur)="onBlur(item.value)"
     />
   </div>
   <button (click)="onClicked(false)" *ngIf="task?.status !== deleted">
