@@ -25,7 +25,15 @@ export class ItemComponent implements OnInit {
     this.updateTask.emit(this.task);
   }
 
+  onBlur(value: string) {
+    if (value === this.task.taskItem) {
+      return;
+    }
+    this.task.taskItem = value;
+    this.updateTask.emit(this.task);
+  }
+
   ngOnInit() {
-    this.name = 'item' + this.task?.taskItem;
+    this.name = 'item' + this.task?.id;
   }
 }
